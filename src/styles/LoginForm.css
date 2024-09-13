@@ -1,0 +1,26 @@
+/* Center the form vertically */
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style the login card */
+  .login-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Add spacing to form items */
+  .form-item {
+    margin-bottom: 16px;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
