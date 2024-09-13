@@ -1,71 +1,73 @@
-# Getting Started with Create React App
+# Todo Application with Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+This is a simple React-based Todo application that allows users to authenticate (sign up and log in) and manage their todo list. It provides the following key features:
+- User registration (sign up)
+- User login
+- Manage todo items (add, edit, delete, mark as complete/incomplete)
+- Client-side validation using **Formik** and **Yup**
+- State management using **React Context**
+- UI styled with **Ant Design**
 
-## Available Scripts
+## Features
+1. **Authentication**:  
+   - Users can register with their email, password, and name.
+   - Log in functionality with form validation.
+   - Local state management for user authentication.
 
-In the project directory, you can run:
+2. **Todo Management**:  
+   - Users can create, edit, delete, and mark todo items as complete/incomplete.
+   - Todos have a title and description.
+   - Responsive design for both desktop and mobile devices.
 
-### `npm start`
+3. **Bonus Features**:  
+   - Client-side routing with **React Router**.
+   - Persistence of todos using local storage to ensure data is not lost on page refresh.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
+The project follows a modular component-based structure. Below are the key folders:
+- **components**: Contains reusable UI components like authentication forms and the todo list.
+- **context**: Manages global state for user authentication and todos.
+- **hooks**: Custom hooks for authentication logic.
+- **pages**: Separate pages for login, registration, and the todo dashboard.
+- **utils**: Validation schemas and other utility functions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Run This Project
 
-### `npm test`
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v14 or later)
+- **npm** or **yarn** (npm is used here)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps to Run
 
-### `npm run build`
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run the application**:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open the application**:
+   After running the command, the app will be available at `http://localhost:3000`.
 
-### `npm run eject`
+### Available Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **`npm start`**: Starts the development server.
+- **`npm run build`**: Builds the app for production.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# To-Do
+## Future Enhancements
+Some ideas for future improvement include:
+- **Backend Integration**: Adding a backend for real authentication and todo management.
+- **Authorization**: Restricting users from viewing other users' todo lists.
+- **Testing**: Implementing unit and integration tests for better code reliability.
+- **Dark Mode**: Adding theme switching functionality to enhance the UI.
