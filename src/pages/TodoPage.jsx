@@ -2,7 +2,10 @@ import React from 'react';
 import TodoList from '../components/Todo/TodoList';
 import useAuth from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
-import { Button } from 'antd';
+import { Button, Typography, Space, Layout } from 'antd';
+
+const { Header, Content } = Layout;
+const { Title } = Typography;
 
 const TodoPage = () => {
   const { user, logout } = useAuth();
@@ -20,13 +23,19 @@ const TodoPage = () => {
   }
 
   return (
-    <div className="todo-page">
-      <h2>Welcome, {user.name}</h2>
-      <Button onClick={handleLogout} type="primary" danger>
-        Logout
-      </Button>
-      <TodoList />
-    </div>
+    <Layout>
+      <Header>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' }}>
+          <Title level={2} style={{ color: '#fff' }}>Welcome, {user.name}</Title>
+          <Button onClick={handleLogout} type="primary" danger>
+            Logout
+          </Button>
+        </div>
+      </Header>
+      <Content style={{ padding: '24px', background: '#fff' }}>
+        <TodoList />
+      </Content>
+    </Layout>
   );
 };
 

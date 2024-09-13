@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, List, Checkbox } from 'antd';
+import { Button, List, Checkbox, Space } from 'antd';
 import { TodoContext } from '../../context/TodoContext';
 
 const TodoItem = ({ todo }) => {
@@ -8,12 +8,14 @@ const TodoItem = ({ todo }) => {
   return (
     <List.Item
       actions={[
-        <Button type="link" onClick={() => setEditingTodo(todo)}>
-          Edit
-        </Button>,
-        <Button type="link" danger onClick={() => deleteTodo(todo.id)}>
-          Delete
-        </Button>,
+        <Space>
+          <Button type="link" onClick={() => setEditingTodo(todo)}>
+            Edit
+          </Button>
+          <Button type="link" danger onClick={() => deleteTodo(todo.id)}>
+            Delete
+          </Button>
+        </Space>
       ]}
     >
       <List.Item.Meta

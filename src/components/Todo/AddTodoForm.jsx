@@ -47,9 +47,11 @@ const AddTodoForm = () => {
             {touched.description && errors.description && <div className="error">{errors.description}</div>}
           </div>
 
-          <Button type="primary" htmlType="submit" loading={isSubmitting}>
-            Add Todo
-          </Button>
+          <div style={{ marginTop: '10px' }}>
+            <Button type="primary" htmlType="submit" loading={isSubmitting}>
+              Add Todo
+            </Button>
+          </div>
         </Form>
       )}
     </Formik>

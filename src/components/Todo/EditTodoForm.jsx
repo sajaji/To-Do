@@ -47,9 +47,12 @@ const EditTodoForm = ({ todo, onClose }) => {
             {touched.description && errors.description && <div className="error">{errors.description}</div>}
           </div>
 
-          <Button type="primary" htmlType="submit" loading={isSubmitting}>
-            Save Changes
-          </Button>
+          <div style={{ marginTop: '10px' }}>
+            <Button type="primary" htmlType="submit" loading={isSubmitting}>
+              Save Changes
+            </Button>
+          </div>
+          
         </Form>
       )}
     </Formik>
